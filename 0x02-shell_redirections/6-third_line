@@ -1,9 +1,2 @@
 #!/bin/bash
-# Script to display the third line of the file iacta
-
-# Check if file exists
-if [ -f "iacta" ]; then
-    head -n 3 iacta | tail -n 1
-else
-    echo "File 'iacta' not found."
-fi
+awk 'NR == 3 { print; exit }' iacta
