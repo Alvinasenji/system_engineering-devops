@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
-# Displays "I am invincible!!!" when receiving a sigterm signal 
+# A Bash script that displays "To infinity and beyond" and handles SIGTERM.
 
-terminate() {
-	echo "I am invincible!!!"
-}
+trap 'echo "I am invincible!!!"' SIGTERM
 
-trap terminate SIGTERM
-
-while true
-do
-	echo "To infinity and beyond"
-	sleep 2
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
 done
